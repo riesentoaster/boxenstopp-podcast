@@ -1,5 +1,29 @@
 remote_theme: pages-themes/tactile@v0.2.0
 title: Boxenstopp-Podcast
 show_downloads: false
+
+# Podcast settings
+podcast:
+  title: "Boxenstopp-Podcast"
+  author: "Boxenstopp"
+  description: "Podcast der Predigten im Boxenstopp"
+  website: "https://podcast.boxenstopp-klettgau.ch"
+  language: "ch-de"
+  type: "episodic"
+  image: "https://podcast.boxenstopp-klettgau.ch/assets/logo.png"
+  explicit: false
+  categories:
+    - text: "Religion &amp; Spirituality"
+      subcategory: "Christianity"
+  episode_defaults:
+    type: "full"
+    explicit: false
+    image: "logo.png"
+    image_url_prefix: "assets"
+    audio:
+      type: "audio/mpeg"
+      url_prefix: "assets/audio"
+
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
