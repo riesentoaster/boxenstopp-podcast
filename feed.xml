@@ -11,9 +11,9 @@
         <description>{{ site.podcast.description }}</description>
         <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
         <image>
-            <url>https://media.metaebene.me/media/freakshow/freakshow-logo-1.0.jpg</url>
-            <title>Freak Show</title>
-            <link>https://freakshow.fm</link>
+            <url>{{ site.podcast.image }}</url>
+            <title>{{ site.podcast.title }}</title>
+            <link>{{ site.podcast.website }}</link>
         </image>
         <language>{{ site.podcast.language }}</language>
         <copyright>{{ site.time | date: '%Y' }} {{ site.podcast.author }}</copyright>
