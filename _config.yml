@@ -6,7 +6,10 @@ show_downloads: false
 podcast:
   title: "Boxenstopp-Podcast"
   author: "Boxenstopp"
-  description: "Podcast der Predigten im Boxenstopp"
+  description: >-
+    Podcast der Predigten im Boxenstopp
+
+    Boxenstopp ist der Gottesdienst für Jugendliche und junge Erwachsene der Jungen Kirche Klettgau. Weitere Informationen zum Boxenstopp findest du unter <a href="https://boxenstopp-klettgau.ch">boxenstopp-klettgau.ch</a>.
   language: "ch-de"
   type: "episodic"
   image: "https://podcast.boxenstopp-klettgau.ch/assets/logo.png"

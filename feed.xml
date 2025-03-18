@@ -10,7 +10,7 @@
         <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
         <title>{{ site.podcast.title }}</title>
         <link>{{ site.url }}</link>
-        <description>{{ site.podcast.description }}</description>
+        <description><![CDATA[{{ site.podcast.description }}]]></description>
         <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S +0100" }}</lastBuildDate>
         <image>
             <url>{{ site.podcast.image }}</url>
@@ -22,7 +22,7 @@
         <podcast:guid>{{ site.podcast.guid }}</podcast:guid>
         <itunes:author>{{ site.podcast.author }}</itunes:author>
         <itunes:type>{{ site.podcast.type }}</itunes:type>
-        <itunes:summary>{{ site.podcast.description }}</itunes:summary>
+        <itunes:summary><![CDATA[{{ site.podcast.description }}]]></itunes:summary>
         <itunes:image href="{{ site.podcast.image }}" />
         {% for category in site.podcast.categories -%}
         <itunes:category text="{{ category.text }}">
