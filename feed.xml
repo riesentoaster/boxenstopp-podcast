@@ -21,7 +21,10 @@
         <copyright>{{ site.time | date: '%Y' }} {{ site.podcast.author }}</copyright>
         <podcast:guid>{{ site.podcast.guid }}</podcast:guid>
         <itunes:author>{{ site.podcast.author }}</itunes:author>
-        <itunes:email>{{ site.podcast.email }}</itunes:email>
+        <itunes:owner>
+            <itunes:name>{{ site.podcast.owner.name }}</itunes:name>
+            <itunes:email>{{ site.podcast.owner.email }}</itunes:email>
+        </itunes:owner>
         <itunes:type>{{ site.podcast.type }}</itunes:type>
         <itunes:summary><![CDATA[{{ site.podcast.description }}]]></itunes:summary>
         <itunes:image href="{{ site.podcast.image }}" />
