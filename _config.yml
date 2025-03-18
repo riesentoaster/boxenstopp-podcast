@@ -6,6 +6,7 @@ show_downloads: false
 podcast:
   title: "Boxenstopp-Podcast"
   author: "Boxenstopp"
+  email: "boxenstopp-podcast@valentinhuber.me"
   description: >-
     Podcast der Predigten im Boxenstopp
 
