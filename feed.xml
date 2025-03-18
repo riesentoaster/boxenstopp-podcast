@@ -4,21 +4,25 @@
 <rss version="2.0"
     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
     xmlns:content="http://purl.org/rss/1.0/modules/content/"
-    xmlns:podcast="https://podcastindex.org/namespace/1.0">
+    xmlns:podcast="https://podcastindex.org/namespace/1.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
+        <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
         <title>{{ site.podcast.title }}</title>
-        <link>{{ site.podcast.website }}</link>
+        <link>{{ site.url }}</link>
         <description>{{ site.podcast.description }}</description>
-        <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+        <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S +0100" }}</lastBuildDate>
         <image>
             <url>{{ site.podcast.image }}</url>
             <title>{{ site.podcast.title }}</title>
-            <link>{{ site.podcast.website }}</link>
+            <link>{{ site.url }}</link>
         </image>
         <language>{{ site.podcast.language }}</language>
         <copyright>{{ site.time | date: '%Y' }} {{ site.podcast.author }}</copyright>
+        <podcast:guid>{{ site.podcast.guid }}</podcast:guid>
         <itunes:author>{{ site.podcast.author }}</itunes:author>
         <itunes:type>{{ site.podcast.type }}</itunes:type>
+        <itunes:summary>{{ site.podcast.description }}</itunes:summary>
         <itunes:image href="{{ site.podcast.image }}" />
         {% for category in site.podcast.categories -%}
         <itunes:category text="{{ category.text }}">
@@ -35,7 +39,7 @@
             <pubDate>{{ episode.date | date: "%a, %d %b %Y 12:00:00 CET" }}</pubDate>
             <guid isPermaLink="false">{{ episode.date | date: "%Y-%m-%d" }}</guid>
             <description><![CDATA[{{ episode.excerpt }}]]></description>
-            <enclosure length="{{ episode.audio.size }}" type="{{ episode.audio.type | default: site.podcast.episode_defaults.audio.type }}" url="{{ site.url }}/{{ site.podcast.episode_defaults.audio.url_prefix }}/{{ episode.audio.url }}" />
+            <enclosure length="{{ episode.audio.size }}" type="{{ episode.audio.type | default: site.podcast.episode_defaults.audio_type }}" url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ episode.audio.url }}" />
             <itunes:duration>{{ episode.duration }}</itunes:duration>
             <itunes:author>{{ site.podcast.author }}</itunes:author>
             <itunes:episode>{{ episode.index }}</itunes:episode>
@@ -44,10 +48,10 @@
             <content:encoded><![CDATA[{{ episode.content }}]]></content:encoded>
             <itunes:explicit>{{ episode.explicit | default: site.podcast.episode_defaults.explicit }}</itunes:explicit>
             {% if episode.transcripts.json -%}
-            <podcast:transcript url="{{ site.url }}/{{ site.podcast.episode_defaults.audio.url_prefix }}/{{ episode.transcripts.json }}" type="application/json"/>
+            <podcast:transcript url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ episode.transcripts.json }}" type="application/json"/>
             {% endif -%}
             {% if episode.transcripts.vtt -%}
-            <podcast:transcript url="{{ site.url }}/{{ site.podcast.episode_defaults.audio.url_prefix }}/{{ episode.transcripts.vtt }}" type="text/vtt"/>
+            <podcast:transcript url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ episode.transcripts.vtt }}" type="text/vtt"/>
             {% endif -%}
         </item>
         {% endfor %}

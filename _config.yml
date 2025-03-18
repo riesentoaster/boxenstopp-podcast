@@ -7,11 +7,11 @@ podcast:
   title: "Boxenstopp-Podcast"
   author: "Boxenstopp"
   description: "Podcast der Predigten im Boxenstopp"
-  website: "https://podcast.boxenstopp-klettgau.ch"
   language: "ch-de"
   type: "episodic"
   image: "https://podcast.boxenstopp-klettgau.ch/assets/logo.png"
   explicit: false
+  guid: "7e99bbfc-6727-51e8-88c4-a7da1440b7ab" # Calculated according to https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#guid
   categories:
     - text: "Religion &amp; Spirituality"
       subcategory: "Christianity"
@@ -20,9 +20,8 @@ podcast:
     explicit: false
     image: "logo.png"
     image_url_prefix: "assets"
-    audio:
-      type: "audio/mpeg"
-      url_prefix: "assets/audio"
+    audio_type: "audio/mpeg"
+    audio_url_prefix: "assets/audio"
 
 plugins:
   - jekyll-remote-theme
