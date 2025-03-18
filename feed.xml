@@ -36,7 +36,7 @@
         <item>
             <title>{{ episode.title }}</title>
             <link>{{ site.url }}{{ episode.url }}</link>
-            <pubDate>{{ episode.date | date: "%a, %d %b %Y 12:00:00 CET" }}</pubDate>
+            <pubDate>{{ episode.date | date: "%a, %d %b %Y 12:00:00 +0100" }}</pubDate>
             <guid isPermaLink="false">{{ episode.date | date: "%Y-%m-%d" }}</guid>
             <description><![CDATA[{{ episode.excerpt }}]]></description>
             <enclosure length="{{ episode.audio.size }}" type="{{ episode.audio.type | default: site.podcast.episode_defaults.audio_type }}" url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ episode.audio.url }}" />
