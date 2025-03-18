@@ -42,7 +42,7 @@
             <enclosure length="{{ episode.audio.size }}" type="{{ episode.audio.type | default: site.podcast.episode_defaults.audio_type }}" url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ episode.audio.url }}" />
             <itunes:duration>{{ episode.duration }}</itunes:duration>
             <itunes:author>{{ site.podcast.author }}</itunes:author>
-            <itunes:episode>{{ episode.index }}</itunes:episode>
+            <itunes:episode>{{ forloop.index }}</itunes:episode>
             <itunes:episodeType>{{ episode.type | default: site.podcast.episode_defaults.type }}</itunes:episodeType>
             <itunes:image href="{{ site.url }}/{{ site.podcast.episode_defaults.image_url_prefix }}/{{ episode.image | default: site.podcast.episode_defaults.image }}" />
             <content:encoded><![CDATA[{{ episode.content }}]]></content:encoded>
