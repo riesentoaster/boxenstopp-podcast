@@ -1,0 +1,149 @@
+---
+layout: default
+---
+
+<p>Predigt vom {{ page.date | date: '%d.%m.%Y' }} von {{ page.speaker }}</p>
+
+<script src="https://cdn.podlove.org/web-player/5.x/embed.js"></script>
+<div id="podlove-player"></div>
+<script>
+    podlovePlayer('#podlove-player', {
+        "version": 5,
+        "show": {
+            "title": "{{ site.podcast.title }}",
+            "summary": '{{ site.podcast.description }}',
+            "poster": "{{ site.podcast.image }}",
+            "link": "{{ site.url }}"
+        },
+        "title": "{{ page.title }}",
+        "duration": "{{ page.duration }}",
+        "poster": "{{ site.url }}/{{ site.podcast.episode_defaults.image_url_prefix }}/{{ page.image | default: site.podcast.episode_defaults.image }}",
+        "link": "{{ page.url }}",
+        "audio": [
+            {
+                "url": "{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ page.audio.url }}",
+                "size": "{{ page.audio.size }}",
+                "title": "{{ page.title }}",
+                "mimeType": "{{ page.audio.type | default: site.podcast.episode_defaults.audio_type }}"
+            }
+        ],
+        /*{% if page.transcripts.json -%}*/
+        "transcripts": "{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ page.transcripts.json }}"
+        /*{% endif -%}*/
+    }, {
+        "version": 5,
+        "subscribe-button": {
+            "feed": "{{ site.url }}/feed.xml",
+            "clients": [
+                {
+                    "id": "apple-podcasts",
+                    "service": "id1802967986"
+                },
+                {
+                    "id": "spotify",
+                    "service": "https://open.spotify.com/show/2xPKqeAdETIWM68PMtbIqJ?si=pMBmDC4MSFuBRcEtT_MZww"
+                },
+                {
+                    "id": "antenna-pod"
+                },
+                {
+                    "id": "beyond-pod"
+                },
+                {
+                    "id": "castbox",
+                    "service": "castbox-id"
+                },
+                {
+                    "id": "castro"
+                },
+                {
+                    "id": "clementine"
+                },
+                {
+                    "id": "downcast"
+                },
+                {
+                    "id": "google-podcasts",
+                    "service": "{{ site.url }}/feed.xml"
+                },
+                {
+                    "id": "gpodder"
+                },
+                {
+                    "id": "itunes"
+                },
+                {
+                    "id": "i-catcher"
+                },
+                {
+                    "id": "instacast"
+                },
+                {
+                    "id": "overcast"
+                },
+                {
+                    "id": "player-fm"
+                },
+                {
+                    "id": "pocket-casts"
+                },
+                {
+                    "id": "pocket-casts",
+                    "service": "{{ site.url }}/feed.xml"
+                },
+                {
+                    "id": "pod-grasp"
+                },
+                {
+                    "id": "podcast-addict"
+                },
+                {
+                    "id": "podcast-republic"
+                },
+                {
+                    "id": "podcat"
+                },
+                {
+                    "id": "podscout"
+                },
+                {
+                    "id": "rss-radio"
+                },
+                {
+                    "id": "rss"
+                }
+            ]
+        },
+        // "playlist": [
+        //     {
+        //         "title": "Podlove Web Player",
+        //         "config": "https:\/\/backend.podlovers.org\/wp-json\/podlove-web-player\/shortcode\/publisher\/60",
+        //     },
+        //     {
+        //         "title": "Podlove Publisher",
+        //         "config": "https:\/\/backend.podlovers.org\/wp-json\/podlove-web-player\/shortcode\/publisher\/51",
+        //     },
+        //     {
+        //         "title": "Wir. M\u00fcssen Reden",
+        //         "config": "https:\/\/backend.podlovers.org\/wp-json\/podlove-web-player\/shortcode\/publisher\/15",
+        //     }
+        // ],
+        "share": {
+            "channels": [
+                "whats-app",
+                "mail",
+                "reddit",
+                "facebook",
+                "twitter",
+                "linkedin",
+                "link"
+            ],
+            "sharePlaytime": true
+        }
+    })
+</script>
+
+
+{{ content }}
+
+{% include subscribe-button.html format="rectangle" %}

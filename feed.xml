@@ -49,7 +49,7 @@
             <itunes:episode>{{ forloop.index }}</itunes:episode>
             <itunes:episodeType>{{ episode.type | default: site.podcast.episode_defaults.type }}</itunes:episodeType>
             <itunes:image href="{{ site.url }}/{{ site.podcast.episode_defaults.image_url_prefix }}/{{ episode.image | default: site.podcast.episode_defaults.image }}" />
-            <content:encoded><![CDATA[{{ episode.content }}]]></content:encoded>
+            <content:encoded><![CDATA[<p>Predigt vom {{ page.date | date: '%d.%m.%Y' }} von {{ page.speaker }}</p>{{ episode.content }}]]></content:encoded>
             <itunes:explicit>{{ episode.explicit | default: site.podcast.episode_defaults.explicit }}</itunes:explicit>
             {% if episode.transcripts.json -%}
             <podcast:transcript url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ episode.transcripts.json }}" type="application/json"/>

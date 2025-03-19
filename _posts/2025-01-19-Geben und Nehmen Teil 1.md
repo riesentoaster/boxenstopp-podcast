@@ -1,5 +1,7 @@
 ---
+layout: episode
 title: "Geben und Nehmen: Teil 1"
+speaker: "Sebastian Ebi"
 duration: "29:59"
 audio:
   url: "2025-01-19-Geben-und-Nehmen-Teil-1.mp3"

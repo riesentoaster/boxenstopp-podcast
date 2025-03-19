@@ -1,0 +1,21 @@
+<script>
+    window.podcastData = {
+        "title": "{{ site.podcast.title }}",
+        "description": '{{ site.podcast.description }}',
+        "cover": "{{ site.podcast.image }}",
+        "feeds": [{
+            "type": "audio",
+            "format": "mp3",
+            "url": "{{ site.url }}/feed.xml",
+            "directory-url-itunes": "https://podcasts.apple.com/us/podcast/boxenstopp-podcast/id1802967986"
+        }]
+    }
+</script>
+<div style="margin-left: auto; margin-right: auto; width: fit-content;">
+    <script class="podlove-subscribe-button" src="https://cdn.podlove.org/subscribe-button/javascripts/app.js"
+        data-language="ch-de" data-color="#0e4688" data-size="big" data-json-data="podcastData"
+        data-format="{{ include.format }}" data-style="outline"></script>
+    <noscript>
+        <a href="{{ site.url }}/feed.xml">Podcast abonnieren</a>
+    </noscript>
+</div>
