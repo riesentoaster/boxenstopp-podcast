@@ -13,7 +13,7 @@
         <description><![CDATA[{{ site.podcast.description }}]]></description>
         <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S +0100" }}</lastBuildDate>
         <image>
-            <url>{{ site.podcast.image }}</url>
+            <url>{{ site.url }}/{{ site.podcast.image }}</url>
             <title>{{ site.podcast.title }}</title>
             <link>{{ site.url }}</link>
         </image>
@@ -27,7 +27,7 @@
         </itunes:owner>
         <itunes:type>{{ site.podcast.type }}</itunes:type>
         <itunes:summary><![CDATA[{{ site.podcast.description }}]]></itunes:summary>
-        <itunes:image href="{{ site.podcast.image }}" />
+        <itunes:image href="{{ site.url }}/{{ site.podcast.image }}" />
         {% for category in site.podcast.categories -%}
         <itunes:category text="{{ category.text }}">
             {% if category.subcategory -%}

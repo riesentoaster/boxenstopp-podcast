@@ -2,7 +2,7 @@
     window.podcastData = {
         "title": "{{ site.podcast.title }}",
         "description": '{{ site.podcast.description }}',
-        "cover": "{{ site.podcast.image }}",
+        "cover": "{{ site.url }}/{{ site.podcast.image }}",
         "feeds": [{
             "type": "audio",
             "format": "mp3",
