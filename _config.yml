@@ -2,6 +2,8 @@ remote_theme: pages-themes/tactile@v0.2.0
 title: Boxenstopp-Podcast
 show_downloads: false
 
+permalink: /:year-:month-:day-:title:output_ext
+
 # Podcast settings
 podcast:
   title: "Boxenstopp-Podcast"
