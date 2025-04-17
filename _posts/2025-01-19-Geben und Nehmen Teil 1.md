@@ -21,6 +21,6 @@ Mit Christus kam das Reich Gottes auf die Erde. Für viele Christen bleibt das R
 
 Sebastian verweist während der Predigt mehrfach auf das Plakat zur Predigtserie:
 
-![](/assets/episodes/2025-01-19-Geben-und-Nehmen-Plakat-Teil-1.jpg)
+![]({{ site.url }}/assets/episodes/2025-01-19-Geben-und-Nehmen-Plakat-Teil-1.jpg)
 
-Sebastian hat weiter in einem Dokument viele der Bibelstellen, die er zitiert, aufgeschrieben, du kannst es [hier herunterladen](/assets/episodes/2025-01-19-Referenzen.pdf).
+Sebastian hat weiter in einem Dokument viele der Bibelstellen, die er zitiert, aufgeschrieben, du kannst es [hier herunterladen]({{ site.url }}/assets/episodes/2025-01-19-Referenzen.pdf).
