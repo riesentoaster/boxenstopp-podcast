@@ -19,7 +19,7 @@ Mit Christus kam das Reich Gottes auf die Erde. Für viele Christen bleibt das R
 
 - Predigttext: {% include verses.html content="Markus 6,30–44" %}
 
-Sebastian verweist während der Predigt mehrfach auf das Plakat zur Predigtserie:
+Sebastian verweist während der Predigt mehrfach auf das [Plakat zur Predigtserie]({{ site.url }}/assets/episodes/2025-01-19-Geben-und-Nehmen-Plakat-Teil-1.jpg).
 
 ![]({{ site.url }}/assets/episodes/2025-01-19-Geben-und-Nehmen-Plakat-Teil-1.jpg)
 

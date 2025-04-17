@@ -21,7 +21,7 @@ Denn logisch betrachtet hat derjenige, der gibt, am Ende weniger. Geben ergibt a
 
 - Predigttext: {% include verses.html content="Matthäus 14,23–33" %}
 
-Sebastian verweist während der Predigt mehrfach auf das Plakat zur Predigtserie:
+Sebastian verweist während der Predigt mehrfach auf das [Plakat zur Predigtserie]({{ site.url }}/assets/episodes/2025-02-23-Geben-und-Nehmen-Plakat-Teil-3.jpg).
 
 ![]({{ site.url }}/assets/episodes/2025-02-23-Geben-und-Nehmen-Plakat-Teil-3.jpg)
 

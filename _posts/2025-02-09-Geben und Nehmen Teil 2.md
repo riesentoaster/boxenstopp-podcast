@@ -21,7 +21,7 @@ Die materielle Dimension ist dabei nur ein Teil des Themas. Geben und Nehmen spi
 
 - Predigttext: Echo und Narziss – Eine Sage aus der traditionellen griechischen Mythologie
 
-Sebastian verweist während der Predigt mehrfach auf das Plakat zur Predigtserie:
+Sebastian verweist während der Predigt mehrfach auf das [Plakat zur Predigtserie]({{ site.url }}/assets/episodes/2025-02-09-Geben-und-Nehmen-Plakat-Teil-2.jpg).
 
 ![]({{ site.url }}/assets/episodes/2025-02-09-Geben-und-Nehmen-Plakat-Teil-2.jpg)
 
