@@ -11,7 +11,7 @@ podcast:
   owner:
     name: "Valentin Huber"
     email: "boxenstopp-podcast@valentinhuber.me"
-  description: 'Podcast der Predigten im Boxenstopp</br>Boxenstopp ist der Gottesdienst für Jugendliche und junge Erwachsene der Jungen Kirche Klettgau. Weitere Informationen zum Boxenstopp findest du unter <a href="https://boxenstopp-klettgau.ch">boxenstopp-klettgau.ch</a>.'
+  description: 'Podcast der Predigten im Boxenstopp</br></br>Boxenstopp ist der Gottesdienst für Jugendliche und junge Erwachsene der Jungen Kirche Klettgau. Weitere Informationen zum Boxenstopp findest du unter <a href="https://boxenstopp-klettgau.ch">boxenstopp-klettgau.ch</a>.'
   language: "ch-de"
   type: "episodic"
   image: "assets/logo.png"

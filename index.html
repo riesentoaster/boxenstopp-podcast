@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<p>
+    Im Boxenstopp-Podcast findest du Predigten aus dem Boxenstopp. Boxenstopp ist der Gottesdienst für Jugendliche und
+    junge
+    Erwachsene der Jungen Kirche Klettgau. Weitere Informationen
+    zum Boxenstopp findest du unter <a href="https://boxenstopp-klettgau.ch">boxenstopp-klettgau.ch</a>.
+</p>
+<p>
+    Du kannst ihn den Podcast auf allen Plattformen abonnieren, am einfachsten direkt über folgenden Knopf:
+</p>
+
+{% include subscribe-button.html %}
+
+<h2>Predigten</h2>
+
+{% for post in site.posts %}
+<a href="{{ post.url }}" style="text-decoration: none; color: inherit;">
+    <article>
+        <h3>{% if post.series %}{{ post.series.name }} {{ post.series.part }}: {% endif %}{{ post.title }}</h3>
+        <p>{{ post.date | date: "%B %d, %Y" }}, {{ post.speaker }}</p>
+        <p>{{ post.excerpt }}</p>
+    </article>
+</a>
+{% unless forloop.last %}
+<hr>
+{% endunless %}
+{% endfor %}
+
+{% include subscribe-button.html %}

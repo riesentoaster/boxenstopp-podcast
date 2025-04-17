@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<p style="font-size: 2rem;">{{ page.series.name }} - Teil {{ page.series.part }}</p>
+
 <p>Predigt vom {{ page.date | date: '%d.%m.%Y' }} von {{ page.speaker }}</p>
 
 <script src="https://cdn.podlove.org/web-player/5.x/embed.js"></script>
@@ -15,7 +17,7 @@ layout: default
             "poster": "{{ site.url }}/{{ site.podcast.image }}",
             "link": "{{ site.url }}"
         },
-        "title": "{{ page.title }}",
+        "title": "{% if page.series %}{{ page.series.name }} {{ page.series.part }}: {% endif %}{{ page.title }}",
         "duration": "{{ page.duration }}",
         "poster": "{{ site.url }}/{{ site.podcast.episode_defaults.image_url_prefix }}/{{ page.image | default: site.podcast.episode_defaults.image }}",
         "link": "{{ page.url }}",
