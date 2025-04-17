@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+
+<img src="assets/logo.png" alt="Boxenstopp-Logo"
+    style="width: 400px; height: 200px; display: block; margin: 30px auto; object-fit: cover; object-position: center; border-radius: 10px;">
+
 <p>
     Im Boxenstopp-Podcast findest du Predigten aus dem Boxenstopp. Boxenstopp ist der Gottesdienst für Jugendliche und
     junge
@@ -13,8 +17,8 @@ layout: default
 
 {% include subscribe-button.html %}
 
-<h2>Predigten</h2>
-
+<h2 style="margin-top: 5rem;">Alle Predigten</h2>
+<hr>
 {% for post in site.posts %}
 <a href="{{ post.url }}" style="text-decoration: none; color: inherit;">
     <article>
@@ -23,9 +27,7 @@ layout: default
         <p>{{ post.excerpt }}</p>
     </article>
 </a>
-{% unless forloop.last %}
 <hr>
-{% endunless %}
 {% endfor %}
 
 {% include subscribe-button.html %}
