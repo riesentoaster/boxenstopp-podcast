@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<img src="assets/logo.png" alt="Boxenstopp-Logo"
+<img src="assets/boxenstopp-logo.png" alt="Boxenstopp-Logo"
     style="width: 400px; height: 200px; display: block; margin: 30px auto; object-fit: cover; object-position: center; border-radius: 10px;">
 
 <p>
@@ -22,7 +22,8 @@ layout: default
 {% for post in site.posts %}
 <a href="{{ post.url }}" style="text-decoration: none; color: inherit;">
     <article>
-        <h3>{% if post.series %}{{ post.series.name }} {{ post.series.part }}: {% endif %}{{ post.title }}</h3>
+        <h3>{% if post.title == '' %}{{ post.series.name }} Teil {{ post.series.part }}{% else %}{% if post.series
+            %}{{ post.series.name }} {{ post.series.part }}: {% endif %}{{post.title}}{% endif %}</h3>
         <p>{{ post.date | date: "%B %d, %Y" }}, {{ post.speaker }}</p>
         <p>{{ post.excerpt }}</p>
     </article>

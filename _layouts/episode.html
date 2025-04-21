@@ -17,7 +17,7 @@ layout: default
             "poster": "{{ site.url }}/{{ site.podcast.image }}",
             "link": "{{ site.url }}"
         },
-        "title": "{% if page.series %}{{ page.series.name }} {{ page.series.part }}: {% endif %}{{ page.title }}",
+        "title": "{% if page.title == '' %}{{ page.series.name }} Teil {{ page.series.part }}{% else %}{% if page.series %}{{ page.series.name }} {{ page.series.part }}: {% endif %}{{ page.title }}{% endif %}",
         "duration": "{{ page.duration }}",
         "poster": "{{ site.url }}/{{ site.podcast.episode_defaults.image_url_prefix }}/{{ page.image | default: site.podcast.episode_defaults.image }}",
         "link": "{{ page.url }}",
@@ -25,7 +25,7 @@ layout: default
             {
                 "url": "{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ page.audio.url }}",
                 "size": "{{ page.audio.size }}",
-                "title": "{{ page.title }}",
+                "title": "{% if page.title == '' %}{{ page.series.name }} Teil {{ page.series.part }}{% else %}{% if page.series %}{{ page.series.name }} {{ page.series.part }}: {% endif %}{{ page.title }}{% endif %}",
                 "mimeType": "{{ page.audio.type | default: site.podcast.episode_defaults.audio_type }}"
             }
         ],
@@ -116,20 +116,6 @@ layout: default
                 }
             ]
         },
-        // "playlist": [
-        //     {
-        //         "title": "Podlove Web Player",
-        //         "config": "https:\/\/backend.podlovers.org\/wp-json\/podlove-web-player\/shortcode\/publisher\/60",
-        //     },
-        //     {
-        //         "title": "Podlove Publisher",
-        //         "config": "https:\/\/backend.podlovers.org\/wp-json\/podlove-web-player\/shortcode\/publisher\/51",
-        //     },
-        //     {
-        //         "title": "Wir. M\u00fcssen Reden",
-        //         "config": "https:\/\/backend.podlovers.org\/wp-json\/podlove-web-player\/shortcode\/publisher\/15",
-        //     }
-        // ],
         "share": {
             "channels": [
                 "whats-app",

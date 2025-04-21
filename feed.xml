@@ -36,26 +36,27 @@
         </itunes:category>
         {% endfor -%}
         <itunes:explicit>{{ site.podcast.explicit }}</itunes:explicit>
-        {% for episode in site.posts reversed %}
+        {% for post in site.posts reversed %}
         <item>
-            <title>{% if episode.series %}{{ episode.series.name }} {{ episode.series.part }}: {% endif %}{{ episode.title }}</title>
-            <link>{{ site.url }}{{ episode.url }}</link>
-            <pubDate>{{ episode.date | date: "%a, %d %b %Y 12:00:00 +0100" }}</pubDate>
-            <guid isPermaLink="false">{{ episode.date | date: "%Y-%m-%d" }}</guid>
-            <description><![CDATA[{{ episode.excerpt }}]]></description>
-            <enclosure length="{{ episode.audio.size }}" type="{{ episode.audio.type | default: site.podcast.episode_defaults.audio_type }}" url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ episode.audio.url }}" />
-            <itunes:duration>{{ episode.duration }}</itunes:duration>
+            <title>{% if post.title == '' %}{{ post.series.name }} Teil {{ post.series.part }}{% else %}{% if post.series
+            %}{{ post.series.name }} {{ post.series.part }}: {% endif %}{{post.title}}{% endif %}</title>
+            <link>{{ site.url }}{{ post.url }}</link>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y 12:00:00 +0100" }}</pubDate>
+            <guid isPermaLink="false">{{ post.date | date: "%Y-%m-%d" }}</guid>
+            <description><![CDATA[{{ post.excerpt }}]]></description>
+            <enclosure length="{{ post.audio.size }}" type="{{ post.audio.type | default: site.podcast.episode_defaults.audio_type }}" url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ post.audio.url }}" />
+            <itunes:duration>{{ post.duration }}</itunes:duration>
             <itunes:author>{{ site.podcast.author }}</itunes:author>
             <itunes:episode>{{ forloop.index }}</itunes:episode>
-            <itunes:episodeType>{{ episode.type | default: site.podcast.episode_defaults.type }}</itunes:episodeType>
-            <itunes:image href="{{ site.url }}/{{ site.podcast.episode_defaults.image_url_prefix }}/{{ episode.image | default: site.podcast.episode_defaults.image }}" />
-            <content:encoded><![CDATA[<p>Predigt vom {{ episode.date | date: '%d.%m.%Y' }} von {{ episode.speaker }}</p>{{ episode.content }}]]></content:encoded>
-            <itunes:explicit>{{ episode.explicit | default: site.podcast.episode_defaults.explicit }}</itunes:explicit>
-            {% if episode.transcripts.json -%}
-            <podcast:transcript url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ episode.transcripts.json }}" type="application/json"/>
+            <itunes:episodeType>{{ post.type | default: site.podcast.episode_defaults.type }}</itunes:episodeType>
+            <itunes:image href="{{ site.url }}/{{ site.podcast.episode_defaults.image_url_prefix }}/{{ post.image | default: site.podcast.episode_defaults.image }}" />
+            <content:encoded><![CDATA[<p>Predigt vom {{ post.date | date: '%d.%m.%Y' }} von {{ post.speaker }}</p>{{ post.content }}]]></content:encoded>
+            <itunes:explicit>{{ post.explicit | default: site.podcast.episode_defaults.explicit }}</itunes:explicit>
+            {% if post.transcripts.json -%}
+            <podcast:transcript url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ post.transcripts.json }}" type="application/json"/>
             {% endif -%}
-            {% if episode.transcripts.vtt -%}
-            <podcast:transcript url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ episode.transcripts.vtt }}" type="text/vtt"/>
+            {% if post.transcripts.vtt -%}
+            <podcast:transcript url="{{ site.url }}/{{ site.podcast.episode_defaults.audio_url_prefix }}/{{ post.transcripts.vtt }}" type="text/vtt"/>
             {% endif -%}
         </item>
         {% endfor %}
