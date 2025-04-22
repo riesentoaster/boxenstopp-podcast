@@ -24,7 +24,7 @@ layout: default
     <article>
         <h3>{% if post.title == '' %}{{ post.series.name }} Teil {{ post.series.part }}{% else %}{% if post.series
             %}{{ post.series.name }} {{ post.series.part }}: {% endif %}{{post.title}}{% endif %}</h3>
-        <p>{{ post.date | date: "%B %d, %Y" }}, {{ post.speaker }}</p>
+        <p>{{ post.date | date: '%d.%m.%Y' }}, {{ post.speaker }}</p>
         <p>{{ post.excerpt }}</p>
     </article>
 </a>
