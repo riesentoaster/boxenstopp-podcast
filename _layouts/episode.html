@@ -2,7 +2,9 @@
 layout: default
 ---
 
+{% if page.series -%}
 <p style="font-size: 2rem;">{{ page.series.name }} - Teil {{ page.series.part }}</p>
+{% endif -%}
 
 <p>Predigt vom {{ page.date | date: '%d.%m.%Y' }} von {{ page.speaker }}</p>
 
