@@ -3,7 +3,7 @@ layout: episode
 title: "Deine Vorgeschichte und Gottes Plan damit"
 speaker: "Gabi Tanner"
 duration: "16:56"
-image: "jk-logo.png"
+image: "boxenstopp-logo.png"
 audio:
   url: "2025-04-06-Deine-Vorgeschichte.mp3"
   size: 16407849
