@@ -39,7 +39,7 @@
         {% for post in site.posts reversed %}
         <item>
             <title>{% if post.title == '' %}{{ post.series.name }} Teil {{ post.series.part }}{% else %}{% if post.series
-            %}{{ post.series.name }} {{ post.series.part }}: {% endif %}{{post.title}}{% endif %}</title>
+            %}{{ post.series.name }} {{ post.series.part }}: {% endif %}{{post.title}}{% endif %} // {{ post.speaker }}</title>
             <link>{{ site.url }}{{ post.url }}</link>
             <pubDate>{{ post.date | date: "%a, %d %b %Y 12:00:00 +0100" }}</pubDate>
             <guid isPermaLink="false">{{ post.date | date: "%Y-%m-%d" }}</guid>
