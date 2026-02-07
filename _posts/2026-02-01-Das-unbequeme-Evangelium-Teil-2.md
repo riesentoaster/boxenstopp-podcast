@@ -9,7 +9,7 @@ duration: "35:50"
 image: "episodes/2026-01-18-Das-unbequeme-Evangelium.png"
 audio:
   url: "2026-02-01-Das-unbequeme-Evangelium-Teil-2.mp3"
-  size: 35973516
+  size: 34437823
 transcripts:
   json: 2026-02-01-Das-unbequeme-Evangelium-Teil-2.json
   vtt: 2026-02-01-Das-unbequeme-Evangelium-Teil-2.vtt
