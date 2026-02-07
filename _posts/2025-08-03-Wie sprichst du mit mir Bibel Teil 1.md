@@ -8,11 +8,11 @@ speaker: "Werner Näf"
 duration: "32:20"
 image: "episodes/2025-08-03-Wie-sprichst-du-mit-mir-Bibel-Flyer.png"
 audio:
-  url: "2025-08-03-Wie-sprichst-du-mit-mir-Bibel.mp3"
+  url: "2025-08-03-Wie-sprichst-du-mit-mir-Bibel-Teil-1.mp3"
   size: 31093920
 transcripts:
-  json: 2025-08-03-Wie-sprichst-du-mit-mir-Bibel.json
-  vtt: 2025-08-03-Wie-sprichst-du-mit-mir-Bibel.vtt
+  json: 2025-08-03-Wie-sprichst-du-mit-mir-Bibel-Teil-1.json
+  vtt: 2025-08-03-Wie-sprichst-du-mit-mir-Bibel-Teil-1.vtt
 ---
 
 Die Bibel ist wichtige Grundlage unseres Glaubens. Wie wir mit ihr interagieren informiert was wir glauben und darum lohnt es sich, sich damit auseinanderzusetzen. In der Serie «Wie sprichst du mit mir, Bibel?» soll es um das gehen. 

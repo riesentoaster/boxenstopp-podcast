@@ -8,11 +8,11 @@ speaker: "Stefan Werner"
 duration: "30:25"
 image: "episodes/2025-11-16-Winter-Wunder-Weg-Flyer.png"
 audio:
-  url: "2025-11-16-Winter-Wunder-Weg.mp3"
+  url: "2025-11-16-Winter-Wunder-Weg-Teil-1.mp3"
   size: 29250574
 transcripts:
-  json: 2025-11-16-Winter-Wunder-Weg.json
-  vtt: 2025-11-16-Winter-Wunder-Weg.vtt
+  json: 2025-11-16-Winter-Wunder-Weg-Teil-1.json
+  vtt: 2025-11-16-Winter-Wunder-Weg-Teil-1.vtt
 ---
 
 Die Psalmen sind eine Sammlung von Lobpreis-Liedern. Und sie enthalten eine grosse Tiefe, die uns auch in unseren Lebens-Wintern, wenn wir keine eigene Worte mehr haben, eine Stimme geben können.

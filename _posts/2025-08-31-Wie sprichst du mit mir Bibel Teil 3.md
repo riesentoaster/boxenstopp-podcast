@@ -8,11 +8,11 @@ speaker: "Werner Näf"
 duration: "38:22"
 image: "episodes/2025-08-03-Wie-sprichst-du-mit-mir-Bibel-Flyer.png"
 audio:
-  url: "2025-08-31-Wie-sprichst-du-mit-mir-Bibel.mp3"
+  url: "2025-08-31-Wie-sprichst-du-mit-mir-Bibel-Teil-3.mp3"
   size: 36898590
 transcripts:
-  json: 2025-08-31-Wie-sprichst-du-mit-mir-Bibel.json
-  vtt: 2025-08-31-Wie-sprichst-du-mit-mir-Bibel.vtt
+  json: 2025-08-31-Wie-sprichst-du-mit-mir-Bibel-Teil-3.json
+  vtt: 2025-08-31-Wie-sprichst-du-mit-mir-Bibel-Teil-3.vtt
 ---
 
 Wenn wir die verschiedenen Ebenen, die beim Bibellesen mitschwingen, versuchen, zu vereinen, kommt es manchmal zu Spannungen – was mache ich mit Bibelstellen, die mir widerstreben oder die meiner Erfahrung widersprechen? Im Gespräch mit allen am Prozess Beteiligten können wir diese Spannung aushalten und Vertrauen finden.
