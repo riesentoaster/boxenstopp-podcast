@@ -17,7 +17,7 @@ transcripts:
 
 Lohnt sich Nachfolge? Die Antwort ist ganz klar: Ja! Friede, Freude, Freiheit – und so vieles mehr – finden wir in der Nachfolge Jesu.
 Und doch hat die Welt ein Problem mit Jesus, mit dem, was er gelehrt hat, und mit denen, die sich seine Jünger und Nachfolger nennen. Ein Blick in die Geschichte zeigt: Jesu Nachfolger wurden immer wieder missverstanden, verachtet, ausgestossen – und oft sogar verfolgt.
-Warum also ruft Jesus uns genau in diese abweisende Welt zurück? Und warum sagt er, dass wir „Salz und Licht“ für sie sein sollen?
+Warum also ruft Jesus uns genau in diese abweisende Welt zurück? Und warum sagt er, dass wir «Salz und Licht» für sie sein sollen?
 Wie passt das zusammen – und was hat das mit der Erkenntnis zu tun, dass sich Nachfolge wirklich lohnt?
 
 
