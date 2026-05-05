@@ -3,7 +3,9 @@ repos:
     hooks:
       - id: mp3-podcast-title
         name: set MP3 title from filename
-        entry: python3 scripts/set_mp3_titles.py
-        language: system
+        entry: python scripts/set_mp3_titles.py
+        language: python
+        additional_dependencies:
+          - mutagen>=1.47
         pass_filenames: false
         files: ^assets/audio/.*\.mp3$

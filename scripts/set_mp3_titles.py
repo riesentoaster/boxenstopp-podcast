@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
-"""Set MP3 title from filenames like YYYY-MM-DD-Episode-Teil-1.mp3 (needs ffmpeg)."""
+"""Set MP3 title from filenames like YYYY-MM-DD-Episode-Teil-1.mp3 (mutagen ID3 edit)."""
 
 import argparse
 import re
-import subprocess
 import sys
 from pathlib import Path
+
+try:
+    from mutagen.id3 import TIT2
+    from mutagen.mp3 import MP3
+except ImportError:
+    sys.exit(
+        "mutagen is required: pip install mutagen "
+        "(or use pre-commit, which installs it for this hook)",
+    )
 
 DEFAULT_AUDIO_DIR = Path("assets/audio")
 PODCAST = "Boxenstopp Predigt-Podcast"
 TITLE_SEP = " \u2013 "
 STEM_PATTERN = re.compile(r"^(\d{4}-\d{2}-\d{2})-(.+)$")
-FFMPEG_BASE = ["ffmpeg", "-nostdin", "-hide_banner", "-loglevel", "error", "-y"]
 
 
 def rewrite_mp3(mp3_path: Path) -> None:
@@ -22,27 +29,14 @@ def rewrite_mp3(mp3_path: Path) -> None:
     date_part, slug = match.group(1), match.group(2)
     episode_title = slug.replace("-", " ")
     title = f"{PODCAST}{TITLE_SEP}{date_part}{TITLE_SEP}{episode_title}"
-    temp_path = mp3_path.with_suffix(".tmp.mp3")
-    try:
-        subprocess.run(
-            [
-                *FFMPEG_BASE,
-                "-i",
-                str(mp3_path),
-                "-map",
-                "0",
-                "-c",
-                "copy",
-                "-metadata",
-                f"title={title}",
-                str(temp_path),
-            ],
-            check=True,
-        )
-        temp_path.replace(mp3_path)
-    except Exception:
-        temp_path.unlink(missing_ok=True)
-        raise
+
+    audio = MP3(str(mp3_path))
+    if audio.tags is None:
+        audio.add_tags()
+    audio.tags.delall("TIT2")
+    audio.tags.add(TIT2(encoding=3, text=title))
+    audio.save()
+
     print(title)
 
 
