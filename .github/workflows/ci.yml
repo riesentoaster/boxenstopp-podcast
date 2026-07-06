@@ -28,17 +28,14 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build
 
+      - name: Install lychee
+        run: |
+          curl -sSfL https://github.com/lycheeverse/lychee/releases/download/lychee-v0.24.2/lychee-x86_64-unknown-linux-gnu.tar.gz \
+            | tar xz
+          sudo mv lychee /usr/local/bin/
+
       - name: Check links
-        uses: lycheeverse/lychee-action@v2
-        with:
-          args: >-
-            --verbose
-            --no-progress
-            --root-dir "${{ github.workspace }}/_site"
-            --remap "^https://podcast\.boxenstopp-klettgau\.ch file://${{ github.workspace }}/_site"
-            "${{ github.workspace }}/_site/**/*.html"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash scripts/check_links.sh --skip-build
 
       - name: Check content
         run: python scripts/check.py
