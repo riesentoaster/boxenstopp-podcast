@@ -21,10 +21,10 @@ feed_links="_site/.feed-links.html"
 {
   echo '<!DOCTYPE html><html><body>'
   {
-    grep -oE '(url|href)="https://[^"]+"' "$feed" | sed 's/.*="//;s/"$//'
-    grep -oE '<link>https://[^<]+</link>' "$feed" | sed 's/<link>//;s/<\/link>//'
-    grep -oE '<url>https://[^<]+</url>' "$feed" | sed 's/<url>//;s/<\/url>//'
-    grep -oE 'src="https://[^"]+"' "$feed" | sed 's/.*="//;s/"$//'
+    grep -oE '(url|href)="https://[^"]+"' "$feed" | sed 's/.*="//;s/"$//' || true
+    grep -oE '<link>https://[^<]+</link>' "$feed" | sed 's/<link>//;s/<\/link>//' || true
+    grep -oE '<url>https://[^<]+</url>' "$feed" | sed 's/<url>//;s/<\/url>//' || true
+    grep -oE 'src="https://[^"]+"' "$feed" | sed 's/.*="//;s/"$//' || true
   } | sort -u | while read -r url; do
     printf '<a href="%s"></a>\n' "$url"
   done

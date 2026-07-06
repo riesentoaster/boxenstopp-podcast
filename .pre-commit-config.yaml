@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: podcast-content
         name: podcast content checks
-        entry: python scripts/check.py --fix
+        entry: python3 scripts/check.py --fix
         language: system
         pass_filenames: false
         always_run: true
