@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  link_checker:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -16,13 +16,19 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install Python tools
+        run: pip install -r requirements.txt
+
       - name: Build site
         env:
           JEKYLL_ENV: production
-          PAGES_REPO_NWO: ${{ github.repository }}
         run: bundle exec jekyll build
 
-      - name: Link Checker
+      - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
@@ -30,20 +36,9 @@ jobs:
             --no-progress
             --root-dir "${{ github.workspace }}/_site"
             --remap "^https://podcast\.boxenstopp-klettgau\.ch file://${{ github.workspace }}/_site"
-            '${{ github.workspace }}/_site/**/*.html'
+            "${{ github.workspace }}/_site/**/*.html"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  mp3_metadata:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.13"
-
-      - name: Check episode metadata
-        run: |
-          pip install mutagen
-          python scripts/check_episode_metadata.py
+      - name: Check content
+        run: python scripts/check.py

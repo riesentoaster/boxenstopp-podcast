@@ -1,11 +1,15 @@
 repos:
   - repo: local
     hooks:
-      - id: mp3-podcast-title
-        name: set MP3 title from filename
-        entry: python scripts/set_mp3_titles.py
-        language: python
-        additional_dependencies:
-          - mutagen>=1.47
+      - id: podcast-content
+        name: podcast content checks
+        entry: python scripts/check.py --fix
+        language: system
         pass_filenames: false
-        files: ^assets/audio/.*\.mp3$
+        always_run: true
+      - id: site-links
+        name: check built site links
+        entry: bash scripts/check_links.sh
+        language: system
+        pass_filenames: false
+        always_run: true
