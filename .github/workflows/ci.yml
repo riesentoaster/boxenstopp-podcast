@@ -28,11 +28,11 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build
 
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+
       - name: Install lychee
-        run: |
-          curl -sSfL https://github.com/lycheeverse/lychee/releases/download/lychee-v0.24.2/lychee-x86_64-unknown-linux-gnu.tar.gz \
-            | tar xz
-          sudo mv lychee /usr/local/bin/
+        run: brew install lychee
 
       - name: Check links
         run: bash scripts/check_links.sh --skip-build
