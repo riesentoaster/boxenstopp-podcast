@@ -1,5 +1,6 @@
 remote_theme: pages-themes/tactile@v0.2.0
 title: Boxenstopp-Podcast
+url: https://podcast.boxenstopp-klettgau.ch
 show_downloads: false
 
 permalink: /:year-:month-:day-:title:output_ext

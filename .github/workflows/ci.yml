@@ -5,11 +5,8 @@ on:
     branches: [main]
   pull_request:
 
-env:
-  SITE_URL: https://podcast.boxenstopp-klettgau.ch
-
 jobs:
-  site:
+  link_checker:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -23,7 +20,7 @@ jobs:
         env:
           JEKYLL_ENV: production
           PAGES_REPO_NWO: ${{ github.repository }}
-        run: bundle exec jekyll build --url "$SITE_URL"
+        run: bundle exec jekyll build
 
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
@@ -37,7 +34,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  episodes:
+  mp3_metadata:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
