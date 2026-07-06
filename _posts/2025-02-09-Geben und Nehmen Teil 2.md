@@ -9,7 +9,7 @@ duration: "34:48"
 image: "episodes/2025-01-19-Geben-und-Nehmen-Flyer.jpeg"
 audio:
   url: "2025-02-09-Geben-und-Nehmen-Teil-2.mp3"
-  size: 33451264
+  size: 33450832
 transcripts:
   json: 2025-02-09-Geben-und-Nehmen-Teil-2.json
   vtt: 2025-02-09-Geben-und-Nehmen-Teil-2.vtt

@@ -5,11 +5,11 @@ series:
   name: "Das unbequeme Evangelium"
   part: 2
 speaker: "Sebastian Ebi"
-duration: "35:50"
+duration: "35:49"
 image: "episodes/2026-01-18-Das-unbequeme-Evangelium.png"
 audio:
   url: "2026-02-01-Das-unbequeme-Evangelium-Teil-2.mp3"
-  size: 34437823
+  size: 34437355
 transcripts:
   json: 2026-02-01-Das-unbequeme-Evangelium-Teil-2.json
   vtt: 2026-02-01-Das-unbequeme-Evangelium-Teil-2.vtt

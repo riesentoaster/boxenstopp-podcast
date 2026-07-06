@@ -5,11 +5,11 @@ series:
   name: "Geben und Nehmen"
   part: 3
 speaker: "Sebastian Ebi"
-duration: "30:31"
+duration: "30:30"
 image: "episodes/2025-01-19-Geben-und-Nehmen-Flyer.jpeg"
 audio:
   url: "2025-02-23-Geben-und-Nehmen-Teil-3.mp3"
-  size: 29326843
+  size: 29326411
 transcripts:
   json: 2025-02-23-Geben-und-Nehmen-Teil-3.json
   vtt: 2025-02-23-Geben-und-Nehmen-Teil-3.vtt

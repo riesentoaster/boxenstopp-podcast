@@ -6,7 +6,7 @@ duration: "43:37"
 image: "boxenstopp-logo.png"
 audio:
   url: "2026-03-08-Der-heilige-Geist.mp3"
-  size: 42022080
+  size: 42021652
 transcripts:
   json: 2026-03-08-Der-heilige-Geist.json
   vtt: 2026-03-08-Der-heilige-Geist.vtt

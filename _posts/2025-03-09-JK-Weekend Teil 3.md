@@ -9,7 +9,7 @@ duration: "37:09"
 image: "jk-logo.png"
 audio:
   url: "2025-03-09-JK-Weekend-Teil-3.mp3"
-  size: 35937756
+  size: 35937298
 transcripts:
   json: 2025-03-09-JK-Weekend-Teil-3.json
   vtt: 2025-03-09-JK-Weekend-Teil-3.vtt

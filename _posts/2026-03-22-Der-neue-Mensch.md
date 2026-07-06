@@ -6,7 +6,7 @@ duration: "24:39"
 image: "boxenstopp-logo.png"
 audio:
   url: "2026-03-22-Der-neue-Mensch.mp3"
-  size: 23818287
+  size: 23817857
 transcripts:
   json: 2026-03-22-Der-neue-Mensch.json
   vtt: 2026-03-22-Der-neue-Mensch.vtt

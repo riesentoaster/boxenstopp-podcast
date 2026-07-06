@@ -6,7 +6,7 @@ duration: "25:03"
 image: "boxenstopp-logo.png"
 audio:
   url: "2025-11-02-Strom-und-Erholung.mp3"
-  size: 24204900
+  size: 24204472
 transcripts:
   json: 2025-11-02-Strom-und-Erholung.json
   vtt: 2025-11-02-Strom-und-Erholung.vtt
