@@ -9,7 +9,7 @@ duration: "31:38"
 image: "episodes/2025-11-16-Winter-Wunder-Weg-Flyer.png"
 audio:
   url: "2025-11-30-Winter-Wunder-Weg-Teil-2.mp3"
-  size: 30418770
+  size: 30418279
 transcripts:
   json: 2025-11-30-Winter-Wunder-Weg-Teil-2.json
   vtt: 2025-11-30-Winter-Wunder-Weg-Teil-2.vtt

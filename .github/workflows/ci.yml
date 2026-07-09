@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install Python tools
+        run: pip install -r requirements.txt
+
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
+
+      - name: Install lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --version
+
+      - name: Check links
+        run: bash scripts/check_links.sh --skip-build
+
+      - name: Check content
+        run: python3 scripts/check.py

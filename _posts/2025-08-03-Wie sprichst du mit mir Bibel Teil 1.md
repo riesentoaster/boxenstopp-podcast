@@ -9,7 +9,7 @@ duration: "32:20"
 image: "episodes/2025-08-03-Wie-sprichst-du-mit-mir-Bibel-Flyer.png"
 audio:
   url: "2025-08-03-Wie-sprichst-du-mit-mir-Bibel-Teil-1.mp3"
-  size: 31093920
+  size: 31093517
 transcripts:
   json: 2025-08-03-Wie-sprichst-du-mit-mir-Bibel-Teil-1.json
   vtt: 2025-08-03-Wie-sprichst-du-mit-mir-Bibel-Teil-1.vtt

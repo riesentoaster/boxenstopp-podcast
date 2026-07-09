@@ -6,7 +6,7 @@ duration: "16:56"
 image: "boxenstopp-logo.png"
 audio:
   url: "2025-04-06-Deine-Vorgeschichte.mp3"
-  size: 16407849
+  size: 16407443
 transcripts:
   json: 2025-04-06-Deine-Vorgeschichte.json
   vtt: 2025-04-06-Deine-Vorgeschichte.vtt

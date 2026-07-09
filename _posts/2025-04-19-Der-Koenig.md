@@ -6,7 +6,7 @@ duration: "29:24"
 image: "boxenstopp-logo.png"
 audio:
   url: "2025-04-19-Der-Koenig.mp3"
-  size: 28380296
+  size: 28379878
 transcripts:
   json: 2025-04-19-Der-Koenig.json
   vtt: 2025-04-19-Der-Koenig.vtt
