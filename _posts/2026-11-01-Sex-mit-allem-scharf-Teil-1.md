@@ -19,4 +19,4 @@ Sex sells. Ein wichtiges Thema, und doch haben viele Menschen und spezifisch Chr
 
 - Predigttext: {% include verses.html content="Hohelied 4,1–5+7" %}
 
-Die Slides von Martin inkl. allen zitierten Bibelstellen finden sich [hier]({{ site.url }}/assets/episodes/2026-11-01-Sex-mit-allem-scharf-Flyer.png).
+Die Slides von Martin inkl. allen zitierten Bibelstellen finden sich [hier]({{ site.url }}/assets/episodes/2026-11-01-Sex-mit-allem-scharf-slides.pdf).
